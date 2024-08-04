@@ -7,7 +7,7 @@ const UserItems = () => {
 
   useEffect(() => {
     const fetchItems = async () => {
-      const response = await fetch('http://localhost:4000/api/items', {
+      const response = await fetch('https://jello-mmkk.onrender.com/api/items', {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`,
         },
@@ -27,7 +27,7 @@ const UserItems = () => {
   };
 
   const submitRatingAndComment = async (itemId) => {
-    const response = await fetch(`http://localhost:4000/api/items/${itemId}/rate`, {
+    const response = await fetch(`https://jello-mmkk.onrender.com/api/items/${itemId}/rate`, {
       method: 'POST',
       headers: {
         'Authorization': `Bearer ${localStorage.getItem('token')}`,

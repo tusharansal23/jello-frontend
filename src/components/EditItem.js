@@ -9,7 +9,7 @@ const EditItem = () => {
 
   useEffect(() => {
     const fetchItem = async () => {
-      const response = await fetch(`http://localhost:4000/api/items/${id}`, {
+      const response = await fetch(`https://jello-mmkk.onrender.com/api/items/${id}`, {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`
         }
@@ -25,7 +25,7 @@ const EditItem = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch(`http://localhost:4000/api/items/${id}`, {
+      const response = await fetch(`https://jello-mmkk.onrender.com/api/items/${id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

@@ -5,7 +5,7 @@ const AdminDashboard = () => {
 
   useEffect(() => {
     const fetchItems = async () => {
-      const response = await fetch('http://localhost:4000/api/items', {
+      const response = await fetch('https://jello-mmkk.onrender.com/api/items', {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`
         }
@@ -53,7 +53,7 @@ const AdminDashboard = () => {
   );
 
   async function handleDelete(id) {
-    const response = await fetch(`http://localhost:4000/api/items/${id}`, {
+    const response = await fetch(`https://jello-mmkk.onrender.com/api/items/${id}`, {
       method: 'DELETE',
       headers: {
         'Authorization': `Bearer ${localStorage.getItem('token')}`

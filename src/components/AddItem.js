@@ -13,7 +13,7 @@ const AddItem = () => {
     console.log(localStorage.getItem('token'));
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:4000/api/items', {
+      const response = await fetch('https://jello-mmkk.onrender.com/api/items', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

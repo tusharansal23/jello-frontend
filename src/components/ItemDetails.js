@@ -10,7 +10,7 @@ const ItemDetails = () => {
 
   useEffect(() => {
     const fetchItem = async () => {
-      const response = await fetch(`http://localhost:4000/api/items/${id}`, {
+      const response = await fetch(`https://jello-mmkk.onrender.com/api/items/${id}`, {
         headers: {
           'Authorization': localStorage.getItem('token'),
         },
@@ -22,7 +22,7 @@ const ItemDetails = () => {
   }, [id]);
 
   const handleComment = async () => {
-    const response = await fetch(`http://localhost:4000/api/items/${id}/comments`, {
+    const response = await fetch(`https://jello-mmkk.onrender.com/api/items/${id}/comments`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
